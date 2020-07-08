@@ -1,0 +1,138 @@
+.footer {
+    color: $footerColor;
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: justify;
+
+    @include respond(tablet) {
+        flex-wrap: wrap;
+    }
+
+    &__company,
+    &__contact,
+    &__tweet,
+    &__newsletter {
+        width: 22%;
+        padding: 3rem 4rem;
+
+        @include respond(laptop) {
+            padding: 3rem 2rem;
+        }
+
+        @include respond(tablet) {
+           width: 50%;
+        }
+    }
+    
+    &__company--logo,
+    &__contact--desc,
+    &__heading,
+    &__tweet__tweets {
+        margin: 1rem 0;
+    }
+
+    &__icon {
+        padding-right: 1.4rem;
+        width: 3rem;
+    }
+
+
+
+
+
+    &__company {
+        &--logo {
+            font-size: 3rem;
+            
+        }
+    }
+    background-color: $secondaryColor;
+    &__heading {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: lighten($footerColor, 10);
+        
+        
+
+    }
+
+    &__contact {
+        &--info {
+            margin: 1rem 0;
+        }
+    }
+
+   
+
+    &__tweet {   
+
+        &__tweets {
+            display: flex;
+           // justify-content: center;
+            //align-items: center;
+        }
+
+           
+        &--time {
+            color: $mainColor;
+            font-size: 1.3rem;
+        }
+    }
+
+
+    &__newsletter {
+        &__email {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 3rem;
+        }
+
+        &--input {
+            background-color: darken($footerColor, 20);
+            padding: 1rem;
+            outline: none;
+            border: none;
+            width: 100%;
+            color: $lightColor;
+            
+        }
+        &--btn {
+            text-transform: uppercase;
+            background-color: $mainColor;
+            outline: none;
+            border: none;
+            padding: 2rem;
+            position: absolute;
+            right: 0;
+            cursor: pointer;
+           
+           
+        }
+    }
+}
+
+
+
+.copyright {
+    background-color: rgb(36, 35, 35);
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    color: $lightColor;
+    padding: 2rem 0;
+    font-size: 1.3rem;
+
+    &__social {
+        display: flex;
+
+        &--icon {
+            margin: 0 2rem;
+        }
+    }
+}

@@ -1,0 +1,115 @@
+.testimonial {
+    width: $sectionWidth;
+    margin: 2rem auto;
+    
+    position: relative;
+
+    @include respond(laptop) {
+        width: 90%;
+    }
+    &__icon {
+        font-size: 4.2rem;
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        height: 22rem;
+    }
+
+    &__slide {
+        position: absolute;
+        left: 15%;
+       
+        width: 70%;
+        margin: 0 auto;
+        font-size: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        opacity: 0;
+        transition: $transitionCommon;
+
+        @include respond(tablet-sm) {                
+              font-size: 1.5rem;           
+           
+          }
+
+        
+    }
+
+    &__slideCurrent {
+        opacity: 1;
+    }
+
+    &__review {
+        margin: 2rem 0 4rem 0;
+
+        @include respond(tablet) {
+            margin: 1.6rem 0;
+         }
+        &__author {
+            width: 50%;
+           border-top: $borderLight;
+           padding: 2.4rem 0;
+
+           @include respond(tablet) {
+            width: 70%;
+         }
+          
+        }
+    }
+
+    &__btn {
+        font-size: 4.5rem;
+        position: absolute;
+        top:  50%;
+        transform: translate(-50%);
+        color: $mainColor;
+        transition: $transitionCommon;
+
+        @include respond(tablet-sm) {                
+            font-size: 3rem;
+           
+           
+        }
+
+        &:hover {
+            cursor: pointer;
+            color: darken($mainColor, 10);
+            transform: scale(1.15) translate(-50%);
+        }
+
+        &--left {
+            left: 10rem;
+            @include respond(tablet) {
+                left: 5rem;
+             }
+
+             @include respond(tablet-sm) {                
+                left: 2rem;
+               
+               
+            }
+        }
+
+        &--right {
+            right: 10rem;
+            @include respond(tablet) {
+                right: 5rem;
+             }
+
+             @include respond(tablet-sm) {                
+                right: 2rem
+               
+               
+            }
+        }
+    }
+
+    
+
+  
+}

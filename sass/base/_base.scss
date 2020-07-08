@@ -1,0 +1,136 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;    // 10px
+}
+body {
+    font-family: $primaryFont;
+}
+
+li {
+    list-style: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.logo {
+    font-family: $logoFont;       
+    color: rgb(253, 166, 34);
+}
+
+.iconBg {
+    border: $iconborder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $mainColor;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    top: -5rem;
+    color: white;
+
+
+
+}
+
+.iconInvert {
+    background-color: white;
+    color: $mainColor;
+}
+
+.section {
+
+    &__intro {        
+        margin: 7rem auto;
+        font-size: 2rem;
+        width: $sectionWidth;
+        line-height: 2.8rem;
+        text-align: center;
+
+        @include respond(laptop) {
+            margin: 3.5rem auto;
+        }
+
+        @include respond(tablet-sm) {            
+            margin: 2.7rem auto;
+            width: 80%;
+            font-size: 1.8rem;
+        }
+
+        @include respond(phone-lg) {
+            margin: 2rem auto 1.5rem auto;
+            font-size: 1.4rem;
+            line-height: 2.2rem;
+           
+        }
+
+        
+    }
+    &__containerIcon {
+        
+        width: 7rem;
+        height: 7rem;   
+        top: -4rem;     
+
+        @include respond(tablet-sm) {
+            width: 5.9rem;
+            height: 5.9rem;
+            top: -3rem;
+           
+          }
+    
+    }
+    
+     &__icon {
+        font-size: 3rem;     
+        
+        @include respond(tablet-sm) {
+            font-size: 2rem;
+           
+          }
+                       
+       
+     }
+
+     &__containerHeading {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        width: $sectionWidth;
+        margin: 0 auto;        
+        border-top: $borderLight;
+      
+    }
+
+
+    &__heading {
+        
+        width: 100%;
+        margin-top: 2rem;
+        padding: 2rem;
+        font-size: 3.5rem;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include respond(tablet) {
+            font-size: 3rem;
+            padding: 1rem;
+        }
+
+        @include respond(tablet-sm) {
+          font-size: 2.4rem;
+           
+          }
+       
+    }
+
+}
+

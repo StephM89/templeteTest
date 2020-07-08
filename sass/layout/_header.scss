@@ -1,0 +1,75 @@
+.header {
+    font-size: 2.3rem;
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+    width: 100%;
+    color: white;
+    background-color: $colorLowOpacity;
+
+    @include respond(tablet) {
+        font-size: 2rem;
+     }
+
+     @include respond(tablet-sm) {
+        font-size: 1.4rem;
+    }
+  
+    
+
+   
+
+    &__logo {        
+        padding: 1.6rem 2rem;   
+        font-size: 3rem;   
+        @include respond(tablet-sm) {
+            font-size: 2.5rem;
+            padding: 1.1rem;
+           
+        }    
+
+        @include respond(phone-lg) {
+            font-size: 2rem;
+            padding: 0.8rem;
+           
+        }
+        
+    }
+
+    &__menu {
+        display: flex;
+        margin-right: 2rem;
+       
+
+        &--links {          
+            padding: 2rem;
+            text-shadow: 1px 1px black;
+            font-weight: 600;
+            text-transform: uppercase;
+
+            @include respond(tablet-sm) {
+                padding: 1.3rem;
+            }
+
+            @include respond(phone-lg) {
+               padding: 0.8rem;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: lighten($mainColor, 20);
+            }
+        }
+    }
+
+
+
+    
+}
+
+
+
+
+

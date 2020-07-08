@@ -1,0 +1,35 @@
+//  Breakpoint arguement choice examples:
+// - phone
+// - tablet-port
+// - tablet-land
+// - big-desktop
+
+
+
+// Use em for media queries, so font changes if user changes font-size in their browser.
+// 1em = 16px
+// Divide the max-width(px) by 16
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone-lg {
+        @media only screen and (max-width: 34.375em) { @content };   //550px 
+    }
+
+    @if $breakpoint == tablet-sm {
+        @media only screen and (max-width: 47.5em) { @content };   //760px
+    }
+
+    @if $breakpoint == tablet {
+        @media only screen and (max-width: 66.25em) { @content };   //1060px
+    }
+
+    @if $breakpoint == laptop {
+        @media only screen and (max-width: 87.5em) { @content };   //1400px
+    }
+
+    @if $breakpoint == desktop {
+        @media only screen and (max-width: 112.5em) { @content };  //1800px
+    }
+
+
+}
